@@ -13,19 +13,19 @@ Some *fun*ctions:
 
 - 3D Gaussian
 
-  - ./project "e -1 x x _ 2 / _ z z \* 2 / - pow"
+  - ./project "e -1 x x * 2 / * z z * 2 / - pow"
 
 - Ripple
 
-  - ./project "x x _ z z _ + 2 \* sin 2 /" -lod 300
+  - ./project "x x * z z * + 2 * sin 2 /" -lod 300
 
 - "Sphere"
 
-  - ./project "16 x x _ - z z _ - sqrt" "16 x x _ - z z _ - sqrt -1 \*" -lod 1000
+  - ./project "16 x x * - z z * - sqrt" "16 x x * - z z * - sqrt -1 *" -lod 1000
   - **Note**: Handling complex numbers is a TODO item, so as of now complex results get mapped to zero, resulting in some extra triangles being rendered
 
 - Variety of Sample Functions
-  - ./project "e -1 x x _ 2 / _ z z _ 2 / - pow" "x sin z sin +" "x z -" "-2" "x z 2 _ +"
+  - ./project "e -1 x x * 2 / * z z * 2 / - pow" "x sin z sin +" "x z -" "-2" "x z 2 * +"
 
 ## YouTube/Dropbox/Drive Link:
 
