@@ -1,6 +1,7 @@
 #include "Object.hpp"
 #include "Error.hpp"
 #include "Camera.hpp"
+
 #include <cmath>
 #include <stack>
 #include <vector>

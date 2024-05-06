@@ -106,6 +106,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, std::vector<std::string> he
         }
         curve->Make3DPlane(tokens, lod, length);
         ObjectManager::Instance().AddObject(curve);
+        m_lines.MakeFunctionLines(tokens, lod, length);
     }
 
     // Setup Camera
@@ -134,7 +135,7 @@ SDLGraphicsProgram::SDLGraphicsProgram(int w, int h, std::vector<std::string> he
     m_lines.MakeLine(-50.0f, 0.0f, 0.0f, 50.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
     m_lines.MakeLine(0.0f, -50.0f, 0.0f, 0.0f, 50.0f, 0.0f, 0.0f, 1.0f, 0.0f);
     m_lines.MakeLine(0.0f, 0.0f, -50.0f, 0.0f, 0.0f, 50.0f, 0.0f, 0.0f, 1.0f);
-    m_lines.MakeGrid(-50.0f, 50.0f);
+    // m_lines.MakeGrid(-50.0f, 50.0f);
     m_lines.Gen();
 }
 

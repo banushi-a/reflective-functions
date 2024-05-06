@@ -6,6 +6,7 @@
 #include "Transform.hpp"
 
 #include <vector>
+#include <string>
 #include <glad/glad.h>
 
 #include "glm/vec3.hpp"
@@ -20,6 +21,8 @@ public:
     void MakeLine(float x0, float y0, float z0, float x1, float y1, float z1, float r, float g, float b);
     // Make a square grid of lines at y = 0
     void MakeGrid(float lowerBound, float upperBound);
+    // Make a grid of lines that follow the surface of a given function
+    void MakeFunctionLines(std::vector<std::string> tokens, unsigned int lod, float length);
     // Compile all the lines and send them to a shader
     void Gen();
     // Updates and transformations applied to object
