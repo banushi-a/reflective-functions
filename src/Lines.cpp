@@ -218,65 +218,6 @@ void Lines::MakeFunctionLines(std::vector<std::string> tokens, unsigned int lod,
             isPrev = true;
         }
     }
-
-    // for (int r = lowerBound; r <= upperBound; r++)
-    // {
-    //     for (int c = lowerBound; c <= upperBound; c++)
-    //     {
-    //         float x = lowerBound + interval * c;
-    //         float z = lowerBound + interval * r;
-    //         std::vector<std::string> newTokens1; // (x, z) => (x, z)
-    //         std::vector<std::string> newTokens2; // (x, z) => (x - i, z)
-    //         std::vector<std::string> newTokens3; // (x, z) => (x, z - i)
-    //         std::vector<std::string> newTokens4; // (x, z) => (x - i, z - i)
-    //         for (const auto &token : tokens)
-    //         {
-    //             if (token == "x")
-    //             {
-    //                 newTokens1.push_back(std::to_string(x));
-
-    //                 newTokens2.push_back(std::to_string(x));
-    //                 newTokens2.push_back(std::to_string(interval));
-    //                 newTokens2.push_back("+");
-
-    //                 newTokens3.push_back(std::to_string(x));
-
-    //                 newTokens4.push_back(std::to_string(x));
-    //                 newTokens4.push_back(std::to_string(interval));
-    //                 newTokens4.push_back("+");
-    //             }
-    //             else if (token == "z")
-    //             {
-    //                 newTokens1.push_back(std::to_string(z));
-
-    //                 newTokens2.push_back(std::to_string(z));
-
-    //                 newTokens3.push_back(std::to_string(z));
-    //                 newTokens3.push_back(std::to_string(interval));
-    //                 newTokens3.push_back("+");
-
-    //                 newTokens4.push_back(std::to_string(z));
-    //                 newTokens4.push_back(std::to_string(interval));
-    //                 newTokens4.push_back("+");
-    //             }
-    //             else
-    //             {
-    //                 newTokens1.push_back(token);
-    //                 newTokens2.push_back(token);
-    //                 newTokens3.push_back(token);
-    //                 newTokens4.push_back(token);
-    //             }
-    //         }
-    //         float y1 = evaluateReversePolishFunction2(newTokens1);
-    //         float y2 = evaluateReversePolishFunction2(newTokens2);
-    //         float y3 = evaluateReversePolishFunction2(newTokens3);
-    //         float y4 = evaluateReversePolishFunction2(newTokens4);
-    //         MakeLine(x, y1, z, x + interval, y2, z, 1.0f, 0.0f, 0.0f);
-    //         MakeLine(x, y1, z, x, y3, z + interval, 0.0f, 1.0f, 0.0f);
-    //         MakeLine(x + interval, y2, z, x + interval, y4, z + interval, 0.0f, 0.0f, 1.0f);
-    //         MakeLine(x, y3, z + interval, x + interval, y4, z + interval, 1.0f, 1.0f, 1.0f);
-    //     }
-    // }
 }
 
 void Lines::Gen()

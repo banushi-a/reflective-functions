@@ -159,6 +159,10 @@ void Object::Make3DPlane(std::vector<std::string> tokens, unsigned int lod, floa
         // This is a helper function to generate all of the geometry
         m_geometry.Gen();
 
+        // This generates the lines overlaying the geometry
+        m_lines.MakeFunctionLines(tokens, lod, length);
+        m_lines.Gen();
+
         // Create a buffer and set the stride of information
         // NOTE: How we are leveraging our data structure in order to very cleanly
         //       get information into and out of our data structure.
@@ -233,6 +237,10 @@ void Object::Update(unsigned int screenWidth, unsigned int screenHeight, Camera 
                 {
                         m_shader.SetUniform1i("flipNormals", 0);
                 }
+
+                m_lines.GetTransform().LoadIdentity();
+                m_lines.GetTransform().ApplyTransform(m_transform);
+                m_lines.Update(screenWidth, screenHeight, camera);
         }
         else
         {
@@ -266,6 +274,8 @@ void Object::Render(unsigned int cubemapTexture, bool defaultShader)
                        GL_UNSIGNED_INT,             // Make sure the data type matches
                        nullptr);                    // Offset pointer to the data.
                                                     // nullptr because we are currently bound
+
+        m_lines.Render();
 }
 
 // Returns the actual transform stored in our object

@@ -20,6 +20,7 @@
 #include "Transform.hpp"
 #include "Geometry.hpp"
 #include "Camera.hpp"
+#include "Lines.hpp"
 
 #include "glm/vec3.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -65,6 +66,8 @@ private:
     glm::mat4 m_projectionMatrix;
     // Store the objects Geometry
     Geometry m_geometry;
+    // Stores the lines that overlay the geometry
+    Lines m_lines;
 };
 
 #endif
