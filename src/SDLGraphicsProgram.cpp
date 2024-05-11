@@ -355,12 +355,12 @@ SDL_Window *SDLGraphicsProgram::GetSDLWindow()
 // Helper Function to get OpenGL Version Information
 void SDLGraphicsProgram::GetOpenGLVersionInfo()
 {
-    SDL_Log("========== CONTROLS ==========");
-    SDL_Log("ARROW KEYS to Move Around");
-    SDL_Log("Left Control and Left Shift to Move Up and Down");
-    SDL_Log("W To Toggle Wireframe Mode");
-    SDL_Log("Q To Toggles Normals");
-    SDL_Log("E TO Reflect Normals");
-    SDL_Log("1 - 9 To Toggle Loaded Surfaces");
-    SDL_Log("ESC To Quit");
+    std::cout << "========== CONTROLS ==========" << std::endl;
+    std::cout << "ARROW KEYS to Move Around" << std::endl;
+    std::cout << "Left Control and Left Shift to Move Up and Down" << std::endl;
+    std::cout << "W To Toggle Wireframe Mode" << std::endl;
+    std::cout << "Q To Toggles Normals" << std::endl;
+    std::cout << "E TO Reflect Normals" << std::endl;
+    std::cout << "1 - 9 To Toggle Loaded Surfaces" << std::endl;
+    std::cout << "ESC To Quit" << std::endl;
 }
