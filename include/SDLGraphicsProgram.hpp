@@ -71,7 +71,7 @@ private:
     // Wireframe or Solid
     GLenum m_polygonMode;
     // Currently selected surfaces / curves
-    bool m_showSurface[9] = {false};
+    bool m_showSurface[9] = {true, false, false, false, false, false, false, false, false};
     // Show the normals?
     bool m_showNormals = false;
     // Flip the normals?

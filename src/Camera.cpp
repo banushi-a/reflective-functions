@@ -107,7 +107,6 @@ float Camera::GetViewZDirection()
 
 Camera::Camera()
 {
-    std::cout << "Camera.cpp: (Constructor) Created a Camera!\n";
     // Position us at the origin.
     m_eyePosition = glm::vec3(0.0f, 0.0f, 0.0f);
     // Looking down along the z-axis initially.
